@@ -23,7 +23,7 @@ st.markdown("""
 
 @st.cache_resource
 def init_connection():
-    uri = "mongodb+srv://nanthiwat2590_db_user:CU0CI6uilM2bDpgs@cluster0.dz13uyy.mongodb.net/?appName=Cluster0"
+    uri = st.secrets["mongo"]["uri"]
     return MongoClient(uri)
 
 @st.cache_data(ttl=600)
